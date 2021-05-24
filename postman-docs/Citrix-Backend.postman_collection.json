@@ -1,0 +1,985 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Citrix-Backend",
+		"_postman_id": "744d120f-767f-9534-ddbe-9feb2345cf07",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Profile CRUD",
+			"description": "CRUD Operations For Profiles",
+			"item": [
+				{
+					"name": "Add Profiles",
+					"request": {
+						"url": "http://localhost:3000/api/v1/profiles",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "profile_title",
+									"value": "test",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "payment_card_number",
+									"value": "2112",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "payment_mm",
+									"value": "123",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "payment_yy",
+									"value": "123",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "payment_card_cvv",
+									"value": "123",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "delivery_first_name",
+									"value": "asad",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "delivery_last_name",
+									"value": "sda",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "delivery_street_address",
+									"value": "asd",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "delivery_zip_code",
+									"value": "asd",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "delivery_country",
+									"value": "asd",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "delivery_city",
+									"value": "asda",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "delivery_state",
+									"value": "sd",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "billing_switch",
+									"value": "true",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "billing_first_name",
+									"value": "dfsd",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "billing_last_name",
+									"value": "sdf",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "billing_street_address",
+									"value": "dfsdf",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "billing_country",
+									"value": "sdf",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "billing_city",
+									"value": "df",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "billing_state",
+									"value": "sdf",
+									"type": "text",
+									"description": ""
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Profiles",
+					"request": {
+						"url": "http://localhost:3000/api/v1/profiles",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Update Profiles",
+					"request": {
+						"url": "http://localhost:3000/api/v1/profiles/6037548d0c75853504fa581c",
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "profile_title",
+									"value": "test2",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "payment_card_number",
+									"value": "21121212112100",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "payment_mm",
+									"value": "123",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "payment_yy",
+									"value": "123",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "payment_card_cvv",
+									"value": "123",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "delivery_first_name",
+									"value": "asad",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "delivery_last_name",
+									"value": "sda",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "delivery_street_address",
+									"value": "asd",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "delivery_zip_code",
+									"value": "asd",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "delivery_country",
+									"value": "asd",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "delivery_city",
+									"value": "asda",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "delivery_state",
+									"value": "sd",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "billing_switch",
+									"value": "true",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "billing_first_name",
+									"value": "dfsd",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "billing_last_name",
+									"value": "sdf",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "billing_street_address",
+									"value": "dfsdf",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "billing_country",
+									"value": "sdf",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "billing_city",
+									"value": "df",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "billing_state",
+									"value": "sdf",
+									"type": "text",
+									"description": ""
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Profile",
+					"request": {
+						"url": "http://localhost:3000/api/v1/profiles/6037548d0c75853504fa581c",
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get One Profile",
+					"request": {
+						"url": "http://localhost:3000/api/v1/profiles/6037548d0c75853504fa581c",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Proxies CRUD",
+			"description": "",
+			"item": [
+				{
+					"name": "Add Proxies",
+					"request": {
+						"url": "http://localhost:3000/api/v1/proxies",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "ip",
+									"value": "10.12.12.12",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "port",
+									"value": "12",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "2",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12",
+									"description": "",
+									"type": "text"
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get Proxies",
+					"request": {
+						"url": "http://localhost:3000/api/v1/proxies",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Update Proxy",
+					"request": {
+						"url": "http://localhost:3000/api/v1/proxies/6036575583281450e8ded835",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "ip",
+									"value": "10.12.12.11",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "port",
+									"value": "12",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "afaas",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "sdasdasdasd",
+									"description": "",
+									"type": "text"
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Delete A proxy",
+					"request": {
+						"url": "http://localhost:3000/api/v1/proxies/60374b2c7f5ee832608c9538",
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Users CRUD",
+			"description": "",
+			"item": [
+				{
+					"name": "Get All Users",
+					"request": {
+						"url": "http://localhost:3000/api/v1/users",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoidGVzdCIsImlhdCI6MTYxNDE2OTU4NCwiZXhwIjoxNjE0MzQyMzg0LCJpc3MiOiJodHRwczovL3Njb3RjaC5pbyJ9.RaeCaTsQavIxXblZypjiF6FGk3LbLBWUxOwKkwz1tCc",
+								"description": "",
+								"warning": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"url": "http://localhost:3000/api/v1/login",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoidGVzdCIsImlhdCI6MTYxNDE2OTU4NCwiZXhwIjoxNjE0MzQyMzg0LCJpc3MiOiJodHRwczovL3Njb3RjaC5pbyJ9.RaeCaTsQavIxXblZypjiF6FGk3LbLBWUxOwKkwz1tCc",
+								"description": "",
+								"warning": ""
+							}
+						],
+						"body": {},
+						"description": "Body:\nname\npassword\n"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3000/api/v1/users",
+					"request": {
+						"url": "http://localhost:3000/api/v1/users",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "test121",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "first_name",
+									"value": "test1",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "last_name",
+									"value": "test1",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "test1",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "test1",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "ip_v4",
+									"value": "test1",
+									"description": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "meta.serial_number",
+									"value": "12121212",
+									"description": ""
+								},
+								{
+									"key": "meta.serial",
+									"value": "{serial_number: 1212121212}",
+									"description": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Users - Admin",
+					"request": {
+						"url": "http://localhost:3000/api/v1/getAll",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get Users",
+					"request": {
+						"url": "http://localhost:3000/api/v1/users",
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "sdf",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "sdfdfs",
+									"description": "",
+									"type": "text"
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"url": "http://localhost:3000/api/v1/login",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "test",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "test",
+									"description": "",
+									"type": "text"
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User",
+					"request": {
+						"url": "http://localhost:3000/api/v1/users/60360e8fbc3a2e4adc521a60",
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Update Users",
+					"request": {
+						"url": "http://localhost:3000/api/v1/users/60377bf49cdc9b5be8e28a06",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "test1212",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "first_name",
+									"value": "test1",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "last_name",
+									"value": "test1",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "password",
+									"value": "test12",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "email",
+									"value": "test1",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "ip_v4",
+									"value": "test1",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "meta.serial_number",
+									"value": "12121212",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "meta.serial",
+									"value": "{serial_number: 1212121212}",
+									"type": "text",
+									"description": "",
+									"disabled": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Tasks CRUD",
+			"description": "",
+			"item": [
+				{
+					"name": "Create Task",
+					"request": {
+						"url": "http://localhost:3000/api/v1/tasks",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "store",
+									"value": "Keith",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "size",
+									"value": "8 EU",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "keywords",
+									"value": "+Addidas,-Black,+Blue",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "profile",
+									"value": "{\n            \"_id\": \"603758845f3b7b51cc671462\",\n            \"profile_title\": \"test\",\n            \"payment_card_number\": 2112,\n            \"payment_mm\": 123,\n            \"payment_yy\": 123,\n            \"payment_card_cvv\": 123,\n            \"delivery_first_name\": \"asad\",\n            \"delivery_last_name\": \"sda\",\n            \"delivery_street_address\": \"asd\",\n            \"delivery_zip_code\": \"asd\",\n            \"delivery_country\": \"asd\",\n            \"delivery_city\": \"asda\",\n            \"delivery_state\": \"sd\",\n            \"billing_switch\": true,\n            \"billing_first_name\": \"dfsd\",\n            \"billing_last_name\": \"sdf\",\n            \"billing_street_address\": \"dfsdf\",\n            \"billing_country\": \"sdf\",\n            \"billing_city\": \"df\",\n            \"billing_state\": \"sdf\",\n            \"__v\": 0\n        }",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "proxies",
+									"value": " [\n        {\n            \"_id\": \"603656ea347a583e088a5cf3\",\n            \"ip\": \"10.12.12.12\",\n            \"port\": 12,\n            \"username\": \"2\",\n            \"password\": \"12\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"6036570983281450e8ded834\",\n            \"ip\": \"10.12.12.12\",\n            \"port\": 12,\n            \"username\": \"2\",\n            \"password\": \"12\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"603761d75f3b7b51cc671463\",\n            \"ip\": \"10.12.12.12\",\n            \"port\": 12,\n            \"username\": \"2\",\n            \"password\": \"12\",\n            \"__v\": 0\n        }\n    ]",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "account",
+									"value": "Test 1",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "start_manual",
+									"value": "false",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "start_timestamp",
+									"value": "12121212",
+									"description": "",
+									"type": "text"
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Tasks",
+					"request": {
+						"url": "http://localhost:3000/api/v1/tasks",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Update Task",
+					"request": {
+						"url": "http://localhost:3000/api/v1/tasks/60376bae8b8c272728fd4a0b",
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "store",
+									"value": "Yeezy",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "size",
+									"value": "8 EU",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "keywords",
+									"value": "+Addidas,-Black,+Blue",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "profile",
+									"value": "{\n            \"_id\": \"603758845f3b7b51cc671462\",\n            \"profile_title\": \"test\",\n            \"payment_card_number\": 2112,\n            \"payment_mm\": 123,\n            \"payment_yy\": 123,\n            \"payment_card_cvv\": 123,\n            \"delivery_first_name\": \"asad\",\n            \"delivery_last_name\": \"sda\",\n            \"delivery_street_address\": \"asd\",\n            \"delivery_zip_code\": \"asd\",\n            \"delivery_country\": \"asd\",\n            \"delivery_city\": \"asda\",\n            \"delivery_state\": \"sd\",\n            \"billing_switch\": true,\n            \"billing_first_name\": \"dfsd\",\n            \"billing_last_name\": \"sdf\",\n            \"billing_street_address\": \"dfsdf\",\n            \"billing_country\": \"sdf\",\n            \"billing_city\": \"df\",\n            \"billing_state\": \"sdf\",\n            \"__v\": 0\n        }",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "proxies",
+									"value": "[\n        {\n            \"_id\": \"603656ea347a583e088a5cf3\",\n            \"ip\": \"10.12.12.12\",\n            \"port\": 12,\n            \"username\": \"2\",\n            \"password\": \"12\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"6036570983281450e8ded834\",\n            \"ip\": \"10.12.12.12\",\n            \"port\": 12,\n            \"username\": \"2\",\n            \"password\": \"12\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"603761d75f3b7b51cc671463\",\n            \"ip\": \"10.12.12.12\",\n            \"port\": 12,\n            \"username\": \"2\",\n            \"password\": \"12\",\n            \"__v\": 0\n        }\n    ]",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "account",
+									"value": "Test 1",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "start_manual",
+									"value": "false",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "start_timestamp",
+									"value": "12121212",
+									"type": "text",
+									"description": ""
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Tasks",
+					"request": {
+						"url": "http://localhost:3000/api/v1/tasks/60376bae8b8c272728fd4a0b",
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get One Task",
+					"request": {
+						"url": "http://localhost:3000/api/v1/tasks/60376c958b8c272728fd4a0c",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Task Groups CRUD",
+			"description": "",
+			"item": [
+				{
+					"name": "Add Task Group",
+					"request": {
+						"url": "http://localhost:3000/api/v1/task-groups",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "group_name",
+									"value": "Test Group",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "featured_image",
+									"value": "test.jpg",
+									"description": "",
+									"type": "text"
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Taskgroups",
+					"request": {
+						"url": "http://localhost:3000/api/v1/task-groups",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Update Group",
+					"request": {
+						"url": "http://localhost:3000/api/v1/task-groups/60378dd96715215138aca9bf",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "group_name",
+									"value": "Test Group Updated",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "featured_image",
+									"value": "test.jpg",
+									"type": "text",
+									"description": ""
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Task Group",
+					"request": {
+						"url": "http://localhost:3000/api/v1/task-groups/60378dd96715215138aca9bf",
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get One Task Group",
+					"request": {
+						"url": "http://localhost:3000/api/v1/task-groups/60378ec116910b47c43b50e1",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

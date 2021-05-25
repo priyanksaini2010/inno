@@ -30,6 +30,59 @@ module.exports = {
             }
 
         })
+    },
+
+    delete(req, res) {
+        let result = {};
+        let status = 200;
+        mongoose.connect(connUri, { useNewUrlParser: true }, (err) => {
+            if (!err) {
+                Subscriptions.findByIdAndDelete(req.params.id, (err, deleted) => {
+                    if (!err) {
+                        result.status = status;
+                        result.result = deleted;
+                    } else {
+                        status = 500;
+                        result.status = status;
+                        result.error = err;
+                    }
+                    res.status(status).send(result);
+                })
+            } else {
+                status = 500;
+                result.status = status;
+                result.error = err;
+                res.status(status).send(result);
+            }
+        })
+    },
+
+
+    getAll(req, res) {
+        let result = {};
+        let status = 200;
+        mongoose.connect(connUri, { useNewUrlParser: true }, (err) => {
+            if (!err) {
+                Subscriptions.find({}, (err, subscriptions) => {
+                    if (!err) {
+                        result.status = status;
+                        result.result = subscriptions;
+                        res.status(status).send(result);
+                    } else {
+                        status = 500;
+                        result.status = status;
+                        result.error = err;
+                        res.status(status).send(result);
+                    }
+                });
+            } else {
+                status = 500;
+                result.status = status;
+                result.error = err;
+                res.status(status).send(result);
+            }
+
+        });
     }
     
 }

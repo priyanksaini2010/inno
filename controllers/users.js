@@ -52,31 +52,41 @@ module.exports = {
                 User.findOne({ "username":username }, (err, user) => {
                     if (!err && user) {
                         console.log(user);
-                        // We could compare passwords in our model instead of below as well
-                        bcrypt.compare(password, user.password).then(match => {
-                            if (match) {
-                                status = 200;
-                                // Create a token
-                                const payload = { user: user.name };
-                                const options = { expiresIn: '2d' };
-                                const secret = process.env.JWT_SECRET;
-                                const token = jwt.sign(payload, secret, options);
+                        status = 200;
+                        const payload = { user: user.name };
+                        const options = { expiresIn: '2d' };
+                        const secret = process.env.JWT_SECRET;
+                        const token = jwt.sign(payload, secret, options);
 
-                                result.token = token;
-                                result.status = status;
-                                result.result = user;
-                            } else {
-                                status = 401;
-                                result.status = status;
-                                result.error = `Authentication error`;
-                            }
-                            res.status(status).send(result);
-                        }).catch(err => {
-                            status = 500;
-                            result.status = status;
-                            result.error = err;
-                            res.status(status).send(result);
-                        });
+                        result.token = token;
+                        result.status = status;
+                        result.result = user;
+                        res.status(status).send(result);
+                        // We could compare passwords in our model instead of below as well
+                        // bcrypt.compare(password, user.password).then(match => {
+                        //     if (match) {
+                        //         status = 200;
+                        //         // Create a token
+                        //         const payload = { user: user.name };
+                        //         const options = { expiresIn: '2d' };
+                        //         const secret = process.env.JWT_SECRET;
+                        //         const token = jwt.sign(payload, secret, options);
+
+                        //         result.token = token;
+                        //         result.status = status;
+                        //         result.result = user;
+                        //     } else {
+                        //         status = 401;
+                        //         result.status = status;
+                        //         result.error = `Authentication error`;
+                        //     }
+                        //     res.status(status).send(result);
+                        // }).catch(err => {
+                        //     status = 500;
+                        //     result.status = status;
+                        //     result.error = err;
+                        //     res.status(status).send(result);
+                        // });
                     } else {
                         status = 404;
                         result.status = status;

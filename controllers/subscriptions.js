@@ -83,6 +83,43 @@ module.exports = {
             }
 
         });
+    },
+
+    add(req, res) {
+        let result = {};
+        let status = 200;
+
+        var today = new Date();
+        var dd = today.getDate();
+        var mm = today.getMonth() + 1;
+        var yyyy = today.getFullYear();
+        if (dd < 10) {
+            dd = '0' + dd;
+        }
+        req.body.created_date = dd + '-' + mm + '-' + yyyy;
+        console.log("ADD Subscriptions API calling");
+        console.log(req.body);
+        mongoose.connect(connUri, { useNewUrlParser: true }, (err) => {
+            if (!err) {
+                const subscription = new Subscriptions(req.body);
+                subscription.save((err, subscription) => {
+                    if (!err) {
+                        result.status = status; 
+                        result.result = subscription;
+                    } else {
+                        status = 500;
+                        result.status = status;
+                        result.error = err;
+                    }
+                    res.status(status).send(result);
+                });
+            } else {
+                status = 500;
+                result.status = status;
+                result.error = err;
+                res.status(status).send(result);
+            }
+        })
     }
     
 }
